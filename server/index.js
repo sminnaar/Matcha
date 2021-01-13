@@ -209,7 +209,7 @@ app.post('/registration', async (req, res) => {
     const token = await db.one(dbTokens.create, userData.email);
 
     transporter.sendMail({
-      from: 'matcha.ccliffor@gmail.com',
+      from: 'sminnaar.matcha@gmail.com',
       to: userData.email,
       subject: 'Verify Account',
       html: `
@@ -347,7 +347,7 @@ app.post('/forgot-password', async (req, res) => {
     const token = await db.one(dbTokens.create, userData.email);
 
     await transporter.sendMail({
-      from: 'matcha.ccliffor@gmail.com',
+      from: 'sminnaar.matcha@gmail.com',
       to: userData.email,
       subject: 'Password Reset',
       html: `
@@ -2012,8 +2012,8 @@ app.post('/report', async (req, res) => {
     await db.none(dbReported.create, [req.session.userId, userData.targetId]);
 
     transporter.sendMail({
-      from: 'matcha.ccliffor@gmail.com',
-      to: 'matcha.ccliffor@gmail.com',
+      from: 'sminnaar.matcha@gmail.com',
+      to: 'sminnaar.matcha@gmail.com',
       subject: 'Account Reported',
       html: `
         <h2>

@@ -65,7 +65,7 @@ class App extends React.Component {
           latitude: ipRes.data.latitude,
           longitude: ipRes.data.longitude});
 
-        console.log(ipRes.data);
+        // console.log(ipRes.data);
       }
     } catch (e) {
       console.log(e.message || e);

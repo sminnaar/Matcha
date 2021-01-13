@@ -29,16 +29,21 @@ function sql(file) {
 
 (async function initializeDatabase() {
   console.log('Intitializing database...');
-
+  try {
+  console.log('STARTING...');
   console.log('Creating extensions...');
   try {
+    console.log('Extension  Try...');
     await db.none(sql('./sql/init/extensions.sql'));
+    console.log('Extension  Try After Await...');
   } catch (e) {
+    console.log('Extension  Catch...');
     console.log('Error installing extensions: ' + e.message || e);
   }
 
   console.log('Creating tables...');
   try {
+    console.log('Creating tables Try...');
     await db.none(sql('./sql/init/tables.sql'));
   } catch (e) {
     console.log('Error creating tables: ' + e.message || e);
@@ -59,6 +64,9 @@ function sql(file) {
   }
 
   console.log('Database created\n');
+} catch {
+  console.log('FAILURE');
+}
 })();
 
 module.exports = {
