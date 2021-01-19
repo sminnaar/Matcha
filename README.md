@@ -21,8 +21,10 @@ Make sure to:
 - [Start and enable the posrgres service](https://wiki.archlinux.org/index.php/Systemd#Using_units)
 
 - [Create a user for the postgres shell](https://wiki.archlinux.org/index.php/PostgreSQL)
+	Use your OS username to make it easier to log in
 
-- Use your OS username to make it easier to log in
+- [Create the databse](https://wiki.archlinux.org/index.php/PostgreSQL)
+	Use the database credentials found in the .env file
 
 ### NPM and Node
 
