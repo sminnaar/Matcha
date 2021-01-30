@@ -49,9 +49,9 @@ The app and server was written using node version v13.14.0
 Two instances of npm have to be run:
 - cd into app and server in two seperate terminals
 
-- Run npm install && npm update in both
+- Run *npm install && npm update* in both
 
-- Then run npm start in both
+- Then run *npm start* in both
 
 Site is hosted on:
 
