@@ -42,7 +42,17 @@ The app and server was written using node version v13.14.0
 - Run the command:
 	```bash
 	nvm install 13 && nvm use 13
+	
 	```
+
+## Cloning the project
+
+Grab the url from Github or [Here](https://github.com/sminnaar/matcha.git)
+
+Clone the repository into any availible directory:
+```
+	git clone https://github.com/sminnaar/matcha.git
+```
 
 ## Running the App and Server
 
@@ -57,6 +67,175 @@ Site is hosted on:
 
 	http://localhost:3000/
 
+
+#### Project structure:
+```
+matcha/
+├── app
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.js
+│   │   ├── AuthRoute.js
+│   │   ├── components
+│   │   │   ├── browse
+│   │   │   │   ├── browse.css
+│   │   │   │   └── index.js
+│   │   │   ├── browseProfile
+│   │   │   │   └── index.js
+│   │   │   ├── changeEmail
+│   │   │   │   └── index.js
+│   │   │   ├── changePassword
+│   │   │   │   └── index.js
+│   │   │   ├── chat
+│   │   │   │   ├── chat.css
+│   │   │   │   └── index.js
+│   │   │   ├── editImages
+│   │   │   │   ├── editImages.css
+│   │   │   │   └── index.js
+│   │   │   ├── editInterests
+│   │   │   │   ├── editInterests.css
+│   │   │   │   └── index.js
+│   │   │   ├── editProfile
+│   │   │   │   ├── editProfile.css
+│   │   │   │   └── index.js
+│   │   │   ├── forgotPassword
+│   │   │   │   └── index.js
+│   │   │   ├── generic
+│   │   │   │   └── title
+│   │   │   │       ├── index.js
+│   │   │   │       └── title.css
+│   │   │   ├── header
+│   │   │   │   ├── header.css
+│   │   │   │   └── index.js
+│   │   │   ├── home
+│   │   │   │   └── index.js
+│   │   │   ├── login
+│   │   │   │   └── index.js
+│   │   │   ├── matches
+│   │   │   │   ├── index.js
+│   │   │   │   └── matches.css
+│   │   │   ├── registration
+│   │   │   │   └── index.js
+│   │   │   ├── reset-password
+│   │   │   │   └── index.js
+│   │   │   ├── userProfile
+│   │   │   │   ├── index.js
+│   │   │   │   └── userProfile.css
+│   │   │   ├── verify-account
+│   │   │   │   └── index.js
+│   │   │   └── verify-email
+│   │   │       └── index.js
+│   │   ├── history.js
+│   │   ├── index.js
+│   │   ├── resources
+│   │   │   └── matcha-favicon.png
+│   │   └── validation
+│   │       └── validation.js
+│   └── webpack.config.js
+├── README.md
+└── server
+    ├── databaseSetup.js
+    ├── index.js
+    ├── key.js
+    ├── package.json
+    ├── package-lock.json
+    ├── sample.env
+    ├── sql
+    │   ├── blocked
+    │   │   ├── create.sql
+    │   │   ├── remove.sql
+    │   │   ├── selectFromUsers.sql
+    │   │   └── select.sql
+    │   ├── chat_messages
+    │   │   ├── create.sql
+    │   │   └── select.sql
+    │   ├── genders
+    │   │   └── selectAll.sql
+    │   ├── images
+    │   │   ├── create.sql
+    │   │   ├── remove.sql
+    │   │   ├── selectAll.sql
+    │   │   ├── selectCount.sql
+    │   │   ├── selectFirst.sql
+    │   │   └── select.sql
+    │   ├── init
+    │   │   ├── extensions.sql
+    │   │   ├── functions.sql
+    │   │   ├── populate.sql
+    │   │   └── tables.sql
+    │   ├── interests
+    │   │   └── select.sql
+    │   ├── likes
+    │   │   ├── create.sql
+    │   │   ├── remove.sql
+    │   │   ├── selectCountOnLiked.sql
+    │   │   └── select.sql
+    │   ├── location
+    │   │   ├── check.sql
+    │   │   ├── createOrUpdate.sql
+    │   │   ├── create.sql
+    │   │   └── update.sql
+    │   ├── matches
+    │   │   ├── create.sql
+    │   │   ├── remove.sql
+    │   │   ├── selectFromUser.sql
+    │   │   ├── selectFromUsers.sql
+    │   │   └── select.sql
+    │   ├── notifications
+    │   │   ├── create.sql
+    │   │   ├── remove.sql
+    │   │   └── select.sql
+    │   ├── reported
+    │   │   ├── create.sql
+    │   │   ├── selectFromUsers.sql
+    │   │   └── select.sql
+    │   ├── sexualities
+    │   │   └── selectAll.sql
+    │   ├── tokens
+    │   │   ├── create.sql
+    │   │   ├── remove.sql
+    │   │   └── select.sql
+    │   ├── user_interests
+    │   │   ├── create.sql
+    │   │   ├── remove.sql
+    │   │   └── select.sql
+    │   ├── user_profiles
+    │   │   ├── create.sql
+    │   │   ├── select.sql
+    │   │   └── update.sql
+    │   ├── users
+    │   │   ├── authenticate.sql
+    │   │   ├── authorize.sql
+    │   │   ├── create.sql
+    │   │   ├── geographicDistance.sql
+    │   │   ├── getVerificationStatus.sql
+    │   │   ├── selectEmail.sql
+    │   │   ├── selectOnEmail.sql
+    │   │   ├── selectOnUsername.sql
+    │   │   ├── selectPassword.sql
+    │   │   ├── select.sql
+    │   │   ├── suggestions
+    │   │   │   ├── bisexual.sql
+    │   │   │   ├── heterosexual.sql
+    │   │   │   └── homosexual.sql
+    │   │   ├── updateEmail.sql
+    │   │   ├── updatePassword.sql
+    │   │   ├── updateRating.sql
+    │   │   ├── update.sql
+    │   │   ├── validate
+    │   │   │   ├── email.sql
+    │   │   │   └── username.sql
+    │   │   └── verify.sql
+    │   └── views
+    │       ├── create.sql
+    │       ├── selectCountOnViewed.sql
+    │       ├── selectOnUsers.sql
+    │       └── selectOnViewed.sql
+    └── validation
+        └── validation.js
+```
 
 # Requirements
 

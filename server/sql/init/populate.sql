@@ -2,12 +2,12 @@
 INSERT INTO users
     (username, first_name, last_name, email, verified, hashed_password)
 VALUES
-    ('hetmal', 'Hetero', 'Male', 'hetmal@mailinator.com', TRUE, '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd'),
-    ('hetfem', 'Hetero', 'Female', 'hetfem@mailinator.com', TRUE, '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd'),
-    ('hommal', 'Homo', 'Male', 'hommal@mailinator.com', TRUE, '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd'),
-    ('homfem', 'Homo', 'Female', 'homfem@mailinator.com', TRUE, '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd'),
-    ('bimal', 'Bi', 'Male', 'bimal@mailinator.com', TRUE, '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd'),
-    ('bifem', 'Bi', 'Female', 'bifem@mailinator.com', TRUE, '19513fdc9da4fb72a4a05eb66917548d3c90ff94d5419e1f2363eea89dfee1dd');
+    ('hetmal', 'Hetero', 'Male', 'hetmal@mailinator.com', TRUE, 'a2d679bed5c2f57e3540f88caa01d559c26a0df07df451b9d099d0a84bd5cf05'),
+    ('hetfem', 'Hetero', 'Female', 'hetfem@mailinator.com', TRUE, 'a2d679bed5c2f57e3540f88caa01d559c26a0df07df451b9d099d0a84bd5cf05'),
+    ('hommal', 'Homo', 'Male', 'hommal@mailinator.com', TRUE, 'a2d679bed5c2f57e3540f88caa01d559c26a0df07df451b9d099d0a84bd5cf05'),
+    ('homfem', 'Homo', 'Female', 'homfem@mailinator.com', TRUE, 'a2d679bed5c2f57e3540f88caa01d559c26a0df07df451b9d099d0a84bd5cf05'),
+    ('bimal', 'Bi', 'Male', 'bimal@mailinator.com', TRUE, 'a2d679bed5c2f57e3540f88caa01d559c26a0df07df451b9d099d0a84bd5cf05'),
+    ('bifem', 'Bi', 'Female', 'bifem@mailinator.com', TRUE, 'a2d679bed5c2f57e3540f88caa01d559c26a0df07df451b9d099d0a84bd5cf05');
 
 -- Create preference data
 INSERT INTO genders
