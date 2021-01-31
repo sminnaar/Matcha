@@ -74,33 +74,33 @@ npm start
 The live site will be found at: `http://localhost:3000/`
 
 #### Project structure:
-The following is a breakdown of the file and folder stucture of our project, summarised for brevity. A brief explanation of the file or folders functionaliy is given.
+The following is a breakdown of the file and folder stucture of our project, summarised for brevity. A brief explanation of the file or folders functionality is given.
 ```
 matcha/
-├── app -> Contains all front-end application source code as a ReactJS app. 
-│   ├── package.json -> Contains dependency and project information
-│   ├── src -> Contains primary ReactJS code. 
-│   │   ├── App.css -> Global application styling definitions
-│   │   ├── App.js -> Main ReactJS application definitions for all functionality
-│   │   ├── components -> Contains React component defintions for each piece of functionality
-│   │   │   ├── chat -> An example component
-│   │   │   │   ├── chat.css -> Optional CSS styling 
-│   │   │   │   └── index.js -> Contains all component functionality as a React Class component
-│   │   ├── index.js -> The entry point to the React app which handles library includes and app configuration 
+├── app ---> Contains all front-end application source code as a ReactJS app. 
+│   ├── package.json ---> Contains dependency and project information
+│   ├── src ---> Contains primary ReactJS code. 
+│   │   ├── App.css ---> Global application styling definitions
+│   │   ├── App.js ---> Main ReactJS application definitions for all functionality
+│   │   ├── components ---> Contains React component defintions for each piece of functionality
+│   │   │   ├── chat ---> An example component
+│   │   │   │   ├── chat.css ---> Optional CSS styling 
+│   │   │   │   └── index.js ---> Contains all component functionality as a React Class component
+│   │   ├── index.js ---> The entry point to the React app which handles library includes and app configuration 
 │   │   └── validation 
-│   │       └── validation.js -> Contains JavaScript validation class for general front-end validation 
-└── server -> Contains all back-end application source code as a Node/Express server
-    ├── databaseSetup.js -> Contains database credentials and Postgres connection functionality
-    ├── index.js -> Contains primary server definitions for all libraries, routes and configurations
-    ├── package.json -> Contains dependency and project information
-    ├── sql -> Contains all SQL queries, separated by functionality
-    │   ├── users -> As an example:
-    │   │   ├── create.sql -> Contains the query used to create a new user 
-    |   │   ├── authenticate.sql -> Contains the query used to check user login credentials
+│   │       └── validation.js ---> Contains JavaScript validation class for general front-end validation 
+└── server ---> Contains all back-end application source code as a Node/Express server
+    ├── databaseSetup.js ---> Contains database credentials and Postgres connection functionality
+    ├── index.js ---> Contains primary server definitions for all libraries, routes and configurations
+    ├── package.json ---> Contains dependency and project information
+    ├── sql ---> Contains all SQL queries, separated by functionality
+    │   ├── users ---> As an example:
+    │   │   ├── create.sql ---> Contains the query used to create a new user 
+    |   │   ├── authenticate.sql ---> Contains the query used to check user login credentials
     │   │   └── validate 
-    │   │      └── username.sql -> Contains the query used to check if the username exists
+    │   │      └── username.sql ---> Contains the query used to check if the username exists
     └── validation
-        └── validation.js -> Contains JavaScript validation class for all general back-end validation 
+        └── validation.js ---> Contains JavaScript validation class for all general back-end validation 
 ```
 
 ## Testing
