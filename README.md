@@ -82,7 +82,7 @@ The live site will be found at: `http://localhost:3000/`
 The following is a breakdown of the file and folder stucture of our project, summarised for brevity. A brief explanation of the file or folders functionality is given.
 ```
 matcha/
-├── app ---> Contains all front-end application source code as a ReactJS app. 
+├── app 	 Contains all front-end application source code as a ReactJS app. 
 │   ├── package.json ---> Contains dependency and project information
 │   ├── src ---> Contains primary ReactJS code. 
 │   │   ├── App.css ---> Global application styling definitions
