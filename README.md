@@ -1,79 +1,38 @@
-# Matcha
+# Matcha 2020
 Matcha is a Tinder clone that allows users to match with other users and chat, built with Full-stack Javascript, React (JSX), HTML running on a node server.
 This project was an introduction to the fundamentals of advanced web development and other advanced web development technologies and concepts.
 
-## Requirements
-- NPM
-- Node
-- NVM
+## Requirements \ Constraints
+- Only Micro-framwork are allowed
+    - No ORM
+    - No Validators
+    - No User Accounts Manager
 
-## Installation and Setup
-NOTE: This is for setting the project to run on Arch Linux Manjaro using Xampp. Follow your OS specific instructions for other platforms.
-- Install NPM and Node:
-    ```
-    sudo pacman -S xampp
-    ```
-- Set up a database user and initialize the database:
-    [Mysql Arch Wiki](https://wiki.archlinux.org/index.php/PHP#MySQL/MariaDB)
-- Clone the project into the /opt/lampp/htdocs directory
-    ```
-    git clone https://github.com/tcajee/camagru.git /opt/lampp/htdocs/camagru
-    ```
-- Start the Xampp servers via the included GUI.
-- Initialize the Database tables by calling the setup script [Database Setup](https://localhost/camagru/config/setup.php)
-- Navigate to [PHP Myadmin](https://localhost/phpmyadmin/) to verify that the database has been populated.
-- After running the setup you will be redirected to [Camagru Home](https://localhost/camagru/)
+- Site must have a decent layout and be responsive for mobile use.
+
+- All the forms must have correct validations and the whole website must be secure.
+    - No “plain text” password stored in your database.
+    - Protect agains script injections.
+    - Reject unnwanted or dangerous content.
+    - Secure SQL queries.
 
 ## Tools & Technologies
 #### Back-end:
-- Apache:  An open source web server and the most widely used server worldwide for delivery of web content. Used to  serves the project on localhost for development.
-- PHP: A general-purpose language suited for web development (requirement of the project).
+- Node Server:  A Node.js server makes your app available to serve HTTP requests. It provides the interaction between users and your application. 
+- JavaScript: JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.
 #### Front-end:
 - HTML: The standard markup language used to develop web Pages. It only defines the layout of the page contents. 
 - CSS: Used to define the style of the website. It augments HTML and can be used to create semi-dynamic websites.
-- JavaScript: A programming language that is often used alongside HTML and CSS to make dynamic websites. It is usually referred to as the language of the web because of its strong compatibility with web browsers and HTML.
+- JavaScript: JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.
 #### Data Management System (DBMS):
-- MariaDB: An open source SQL server used as the primary database driver along with the Structured Query Language we used for the project database queries.
+- Postgres: PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
 
-#### Project structure:
-```
-camagru
-├── app
-│   ├── controllers -> Contains all page-specific back-end functionality
-│   │   └── *.php
-│   ├── lib -> Contains addition helper functionality
-│   │   └── helpers
-│   │       └── *.php
-│   └── views -> Contains templates and all page-specific layouts
-│       ├── *.php
-│       ├── layouts
-│       │   └── *.php
-│       └── *.php
-├── config -> Contains all initial application and database functionality
-│   └── *.php
-├── core -> Contains all primary back-end application functionality
-│   └── *.php
-├── css -> Contains all stylesheets
-│   └── *.css
-├── img -> Contains all image files
-│   └── *.png
-│   └── *.jpg
-├── index.php -> Main entry point to the application
-└── js -> Contains all page-specific client-side functionality and AJAX
-   └── *.js
-```
-
-## Testing(Needsto change)
-[Marking sheet linked here](https://github.com/tcajee/camagru/blob/master/camagru.pdf)
-
-
-# Matcha 2020
+## Instalation and Setup
 
 This is a general guide to istall the relevant dependancies and run the project in developement mode.
 
 For a production version you will need to build the app using npm build and add code for the server to serve the static files.
 
-## Setup
 
 ### Database Setup (Postgresql)
 
@@ -128,9 +87,15 @@ Clone the repository into any availible directory:
 Two instances of npm have to be run:
 - cd into app and server in two seperate terminals
 
-- Run *npm install && npm update* in both
+- Run next command in both:
+```
+npm install && npm update
+```
 
-- Then run *npm start* in both
+- Then run the below command in both:
+```
+npm start
+```
 
 Site is hosted on:
 
@@ -308,24 +273,7 @@ matcha/
 
 # Requirements
 
-You can use micro-frameworks, and all the libraries in the world for this project.
-• We will consider that a “micro-framework” has a router, and eventually templating,
-but no ORM, validators or User Accounts Manager.1
-. As long as you respect these
-constraints you are free to use what you like.
 
-Your website must have a decent layout: at least a header, a main section and a
-footer.
-• Your website must be usable on a mobile phone and keep an acceptable layout on
-small resolutions.
-
-All your forms must have correct validations and the whole website must be secure.
-This part is mandatory and will be checked extensively in defense. To give you an
-idea, here are a few elements that are not considered secure:
-◦ To have a “plain text” password stored in your database.
-◦ To be able to inject HTML of “user” Javascript code in unprotected variables.
-◦ To be able to upload unwanted content.
-◦ To be able to alter a SQL request.
 
 # Marking Sheet Stuff
 
@@ -464,3 +412,7 @@ Make sure that:
 - The passwords are encrypted in the database. In no case should they be in the clear.
 - Of the script inserted in forms must not execute
 - There is no SQL injection possible (try a connection with as password 'blabla' OR 1 = '1`)
+
+
+## Testing(Needsto change)
+[Marking sheet linked here](https://github.com/tcajee/camagru/blob/master/camagru.pdf)
