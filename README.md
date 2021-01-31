@@ -3,12 +3,17 @@ This project was an introduction to the fundamentals of advanced web development
 Matcha is a Tinder clone that allows users to match and chat with other users, built with full-stack Javascript with a ReactJS front-end running on a Node/Express 
 server.
 
-## Requirements and Constraints
+## Requirements and Constraints of the Project
 - Any programming languages are allowed
 - Only Micro-frameworks are allowed
     - No Object-relational-mapping (ORM) tools 
     - No external input validators
     - No User Accounts Manager
+
+## Required Tecnologies to Run the Project
+- Node(v13.14.0)
+- NPM(16.14.4)
+- NVM(latest)
 
 ## Tools & Technologies
 
