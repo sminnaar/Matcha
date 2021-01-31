@@ -1,272 +1,111 @@
 # Matcha 2020
-Matcha is a Tinder clone that allows users to match with other users and chat, built with Full-stack Javascript, React (JSX), HTML running on a node server.
 This project was an introduction to the fundamentals of advanced web development and other advanced web development technologies and concepts.
+Matcha is a Tinder clone that allows users to match and chat with other users, built with full-stack Javascript with a ReactJS front-end running on a Node/Express 
+server.
 
-## Requirements \ Constraints
-- Only Micro-framwork are allowed
-    - No ORM
-    - No Validators
+## Requirements and Constraints
+- Any programming languages are allowed
+- Only Micro-frameworks are allowed
+    - No Object-relational-mapping (ORM) tools 
+    - No external input validators
     - No User Accounts Manager
 
-- Site must have a decent layout and be responsive for mobile use.
-
-- All the forms must have correct validations and the whole website must be secure.
-    - No “plain text” password stored in your database.
-    - Protect agains script injections.
-    - Reject unnwanted or dangerous content.
-    - Secure SQL queries.
-
 ## Tools & Technologies
+
 #### Back-end:
-- Node Server:  A Node.js server makes your app available to serve HTTP requests. It provides the interaction between users and your application. 
+- NodeJS/ExpressJS server:  Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. 
 - JavaScript: JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.
+
 #### Front-end:
-- HTML: The standard markup language used to develop web Pages. It only defines the layout of the page contents. 
 - CSS: Used to define the style of the website. It augments HTML and can be used to create semi-dynamic websites.
 - JavaScript: JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.
+- ReactJS: An open-source, front end, JavaScript library for building user interfaces or UI components. React is only concerned with state management and rendering that state to the DOM and is typically used alongside HTML with JSX and JavaScript.
+
 #### Data Management System (DBMS):
 - Postgres: PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
 
-## Instalation and Setup
-
-This is a general guide to istall the relevant dependancies and run the project in developement mode.
-
-For a production version you will need to build the app using npm build and add code for the server to serve the static files.
-
+## Installation and Setup
+This is a general guide to install the relevant dependencies and run the project in developement mode.
+For a production version you will need to build the app using `npm build` and add code for the server to serve the static files.
 
 ### Database Setup (Postgresql)
+Install `postgresql` with relevant package manager
 
-Install postgresql with relevant package manager
-
-This link will explain how to set up postgres on Arch:
-
-[Postgresql Arch Wiki](https://wiki.archlinux.org/index.php/PostgreSQL)
+This link will explain how to set up postgres on Arch Linux: [Postgresql Arch Wiki](https://wiki.archlinux.org/index.php/PostgreSQL)
 
 Make sure to:
-
 - [Initialize the Database Cluster](https://wiki.archlinux.org/index.php/PostgreSQL)
-
-- [Start and enable the posrgres service](https://wiki.archlinux.org/index.php/Systemd#Using_units)
-
-- [Create a user for the postgres shell](https://wiki.archlinux.org/index.php/PostgreSQL)
-	Use your OS username to make it easier to log in
-
-- [Create the databse](https://wiki.archlinux.org/index.php/PostgreSQL)
-	Use the database credentials found in the .env file
+- [Start and enable the postgres service](https://wiki.archlinux.org/index.php/Systemd#Using_units)
+- [Create a user for the postgres shell](https://wiki.archlinux.org/index.php/PostgreSQL). Use your OS username to make it easier to log in.
+- [Create the database](https://wiki.archlinux.org/index.php/PostgreSQL). Uses the database credentials found in the `.env` file.
 
 ### NPM and Node
-
-- Install node and npm
-
+- Install `node` and `npm`
 - To check install run:
 	```bash
 	node -v && npm -v
 	```
-
-The app and server was written using node version v13.14.0
-
+The app and server was written using node version `v13.14.0`
 - Install [nvm](https://github.com/nvm-sh/nvm)
-
 - Run the command:
 	```bash
 	nvm install 13 && nvm use 13
-	
 	```
 
 ## Cloning the project
-
-Grab the url from Github or [Here](https://github.com/sminnaar/matcha.git)
-
+Grab the URL from Github or directly [here](https://github.com/sminnaar/matcha.git)
 Clone the repository into any availible directory:
 ```
-	git clone https://github.com/sminnaar/matcha.git
+git clone https://github.com/sminnaar/matcha.git
 ```
 
 ## Running the App and Server
-
 Two instances of npm have to be run:
-- cd into app and server in two seperate terminals
+- Navigate into `app` folder and the `server` folder in two seperate terminals
 
 - Run next command in both:
 ```
 npm install && npm update
 ```
-
-- Then run the below command in both:
+- Then run the command below in both:
 ```
 npm start
 ```
-
-Site is hosted on:
-
-	http://localhost:3000/
-
+The live site will be found at: `http://localhost:3000/`
 
 #### Project structure:
+The following is a breakdown of the file and folder stucture of our project, summarised for brevity. A brief explanation of the file or folders functionaliy is given.
 ```
 matcha/
-├── app
-│   ├── package.json
-│   ├── package-lock.json
+├── app -> Contains all front-end source code as a ReactJS app. 
+│   ├── package.json -> contains dependency and project information
 │   ├── src
 │   │   ├── App.css
 │   │   ├── App.js
-│   │   ├── AuthRoute.js
 │   │   ├── components
-│   │   │   ├── browse
-│   │   │   │   ├── browse.css
-│   │   │   │   └── index.js
-│   │   │   ├── browseProfile
-│   │   │   │   └── index.js
-│   │   │   ├── changeEmail
-│   │   │   │   └── index.js
-│   │   │   ├── changePassword
-│   │   │   │   └── index.js
 │   │   │   ├── chat
 │   │   │   │   ├── chat.css
-│   │   │   │   └── index.js
-│   │   │   ├── editImages
-│   │   │   │   ├── editImages.css
-│   │   │   │   └── index.js
-│   │   │   ├── editInterests
-│   │   │   │   ├── editInterests.css
-│   │   │   │   └── index.js
-│   │   │   ├── editProfile
-│   │   │   │   ├── editProfile.css
-│   │   │   │   └── index.js
-│   │   │   ├── forgotPassword
 │   │   │   │   └── index.js
 │   │   │   ├── generic
 │   │   │   │   └── title
 │   │   │   │       ├── index.js
 │   │   │   │       └── title.css
-│   │   │   ├── header
-│   │   │   │   ├── header.css
-│   │   │   │   └── index.js
-│   │   │   ├── home
-│   │   │   │   └── index.js
-│   │   │   ├── login
-│   │   │   │   └── index.js
-│   │   │   ├── matches
-│   │   │   │   ├── index.js
-│   │   │   │   └── matches.css
-│   │   │   ├── registration
-│   │   │   │   └── index.js
-│   │   │   ├── reset-password
-│   │   │   │   └── index.js
-│   │   │   ├── userProfile
-│   │   │   │   ├── index.js
-│   │   │   │   └── userProfile.css
-│   │   │   ├── verify-account
-│   │   │   │   └── index.js
-│   │   │   └── verify-email
-│   │   │       └── index.js
-│   │   ├── history.js
 │   │   ├── index.js
-│   │   ├── resources
-│   │   │   └── matcha-favicon.png
 │   │   └── validation
 │   │       └── validation.js
-│   └── webpack.config.js
 ├── README.md
 └── server
     ├── databaseSetup.js
     ├── index.js
-    ├── key.js
     ├── package.json
-    ├── package-lock.json
     ├── sample.env
     ├── sql
-    │   ├── blocked
-    │   │   ├── create.sql
-    │   │   ├── remove.sql
-    │   │   ├── selectFromUsers.sql
-    │   │   └── select.sql
-    │   ├── chat_messages
-    │   │   ├── create.sql
-    │   │   └── select.sql
-    │   ├── genders
-    │   │   └── selectAll.sql
-    │   ├── images
-    │   │   ├── create.sql
-    │   │   ├── remove.sql
-    │   │   ├── selectAll.sql
-    │   │   ├── selectCount.sql
-    │   │   ├── selectFirst.sql
-    │   │   └── select.sql
-    │   ├── init
-    │   │   ├── extensions.sql
-    │   │   ├── functions.sql
-    │   │   ├── populate.sql
-    │   │   └── tables.sql
-    │   ├── interests
-    │   │   └── select.sql
-    │   ├── likes
-    │   │   ├── create.sql
-    │   │   ├── remove.sql
-    │   │   ├── selectCountOnLiked.sql
-    │   │   └── select.sql
-    │   ├── location
-    │   │   ├── check.sql
-    │   │   ├── createOrUpdate.sql
-    │   │   ├── create.sql
-    │   │   └── update.sql
-    │   ├── matches
-    │   │   ├── create.sql
-    │   │   ├── remove.sql
-    │   │   ├── selectFromUser.sql
-    │   │   ├── selectFromUsers.sql
-    │   │   └── select.sql
-    │   ├── notifications
-    │   │   ├── create.sql
-    │   │   ├── remove.sql
-    │   │   └── select.sql
-    │   ├── reported
-    │   │   ├── create.sql
-    │   │   ├── selectFromUsers.sql
-    │   │   └── select.sql
-    │   ├── sexualities
-    │   │   └── selectAll.sql
-    │   ├── tokens
-    │   │   ├── create.sql
-    │   │   ├── remove.sql
-    │   │   └── select.sql
-    │   ├── user_interests
-    │   │   ├── create.sql
-    │   │   ├── remove.sql
-    │   │   └── select.sql
-    │   ├── user_profiles
-    │   │   ├── create.sql
-    │   │   ├── select.sql
-    │   │   └── update.sql
     │   ├── users
-    │   │   ├── authenticate.sql
-    │   │   ├── authorize.sql
     │   │   ├── create.sql
-    │   │   ├── geographicDistance.sql
-    │   │   ├── getVerificationStatus.sql
-    │   │   ├── selectEmail.sql
-    │   │   ├── selectOnEmail.sql
-    │   │   ├── selectOnUsername.sql
-    │   │   ├── selectPassword.sql
-    │   │   ├── select.sql
-    │   │   ├── suggestions
-    │   │   │   ├── bisexual.sql
-    │   │   │   ├── heterosexual.sql
-    │   │   │   └── homosexual.sql
-    │   │   ├── updateEmail.sql
-    │   │   ├── updatePassword.sql
-    │   │   ├── updateRating.sql
-    │   │   ├── update.sql
-    │   │   ├── validate
-    │   │   │   ├── email.sql
-    │   │   │   └── username.sql
-    │   │   └── verify.sql
-    │   └── views
-    │       ├── create.sql
-    │       ├── selectCountOnViewed.sql
-    │       ├── selectOnUsers.sql
-    │       └── selectOnViewed.sql
+    |   │   ├── authenticate.sql
+    │   │   └── validate
+    │   │      ├── email.sql
+    │   │      └── username.sql
     └── validation
         └── validation.js
 ```
@@ -276,6 +115,12 @@ matcha/
 
 
 # Marking Sheet Stuff
+
+- All the forms must have correct validations and the whole website must be secure.
+    - No “plain text” password stored in your database.
+    - Protect agains script injections.
+    - Reject unnwanted or dangerous content.
+    - Secure SQL queries.
 
 Respect for limitations
 The subject allows the use of a micro-framework, and only that.
