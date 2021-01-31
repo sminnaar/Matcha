@@ -18,12 +18,10 @@ server.
 
 #### Front-end:
 - CSS: Used to define the style of the website. It augments HTML and can be used to create semi-dynamic websites.
-
 - JavaScript: JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.
 - ReactJS: An open-source, front end, JavaScript library for building user interfaces or UI components. React is only concerned with state management and rendering that state to the DOM and is typically used alongside HTML with JSX and JavaScript.
 
 #### Data Management System (DBMS):
-
 - Postgres: PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
 
 ## Installation and Setup
@@ -61,17 +59,6 @@ Clone the repository into any availible directory:
 git clone https://github.com/sminnaar/matcha.git
 ```
 
-## Setting up SMTP Sever
-
-Follow this guide using a newly created gmail account:
-    [Setting up your google SMTP server](https://www.siteground.com/kb/google_free_smtp_server/)
-
-After cloning and setting up the SMTP server the sample.env file in the server directory can be renamed to .env and populated.
-```
-    cd matcha/
-    mv /server/sample.env /server/.env
-```
-
 ## Running the App and Server
 Two instances of npm have to be run:
 - Navigate into `app` folder and the `server` folder in two seperate terminals
@@ -90,70 +77,63 @@ The live site will be found at: `http://localhost:3000/`
 The following is a breakdown of the file and folder stucture of our project, summarised for brevity. A brief explanation of the file or folders functionaliy is given.
 ```
 matcha/
-├── app -> Contains all front-end source code as a ReactJS app. 
-│   ├── package.json -> contains dependency and project information
-│   ├── src
-│   │   ├── App.css
-│   │   ├── App.js
-│   │   ├── components
-│   │   │   ├── chat
-│   │   │   │   ├── chat.css
-│   │   │   │   └── index.js
-│   │   │   ├── generic
-│   │   │   │   └── title
-│   │   │   │       ├── index.js
-│   │   │   │       └── title.css
-│   │   ├── index.js
-│   │   └── validation
-│   │       └── validation.js
-├── README.md
-└── server
-    ├── databaseSetup.js
-    ├── index.js
-    ├── package.json
-    ├── sample.env
-    ├── sql
-    │   ├── users
-    │   │   ├── create.sql
-    |   │   ├── authenticate.sql
-    │   │   └── validate
-    │   │      ├── email.sql
-    │   │      └── username.sql
+├── app -> Contains all front-end application source code as a ReactJS app. 
+│   ├── package.json -> Contains dependency and project information
+│   ├── src -> Contains primary ReactJS code. 
+│   │   ├── App.css -> Global application styling definitions
+│   │   ├── App.js -> Main ReactJS application definitions for all functionality
+│   │   ├── components -> Contains React component defintions for each piece of functionality
+│   │   │   ├── chat -> An example component
+│   │   │   │   ├── chat.css -> Optional CSS styling 
+│   │   │   │   └── index.js -> Contains all component functionality as a React Class component
+│   │   ├── index.js -> The entry point to the React app which handles library includes and app configuration 
+│   │   └── validation 
+│   │       └── validation.js -> Contains JavaScript validation class for general front-end validation 
+└── server -> Contains all back-end application source code as a Node/Express server
+    ├── databaseSetup.js -> Contains database credentials and Postgres connection functionality
+    ├── index.js -> Contains primary server definitions for all libraries, routes and configurations
+    ├── package.json -> Contains dependency and project information
+    ├── sql -> Contains all SQL queries, separated by functionality
+    │   ├── users -> As an example:
+    │   │   ├── create.sql -> Contains the query used to create a new user 
+    |   │   ├── authenticate.sql -> Contains the query used to check user login credentials
+    │   │   └── validate 
+    │   │      └── username.sql -> Contains the query used to check if the username exists
     └── validation
-        └── validation.js
+        └── validation.js -> Contains JavaScript validation class for all general back-end validation 
 ```
 
 ## Testing
 [Marking sheet linked here](https://github.com/tcajee/camagru/blob/master/camagru.pdf)
 
 ### Summarised testing points
-1.Launch web server
-2.Create an account
-3.Login
-4.Edit extended profile
-5.View profile proposals
-6.Research /filter
-7.geolocation
-8.Popularity rating
-9.Notifications
-10.Consultations?(see who view/liked profile)
-11.View profile
-12.unlike user
-13.block
-14.chat
+- Launch web server
+- Create an account
+- Login
+- Edit extended profile
+- View profile proposals
+- Searching / filtering
+- Geolocation 
+- Popularity rating
+- Notifications
+- Profile views/likes
+- View user profile
+- Unlike user
+- Block user
+- User chat
 
 ### Expected testing outcomes
-1.You should be able to access my Matcha from the web browser by navigation to localhost:3000.
-2.You should receive an email with a verification link asking you to verify your account.
-3.You should be able to login with the account you just created.
-4.Should be able to edit your extended profile.
-5. When navigating to the search bar should be able to see a list of users which …
-6.You should be able to filter through matches.
-7.You should be able to add your geolocation.
-8.A person’s popularity rating should increase when you …
-9.You should be able to receive notifications when another user has viewed your profile.
-10. You should be able to see who has liked or viewed your profile
-11.You should be able to view a user’s profile.
-12.You should be able to unlike a user( this means you can’t chat with them)
-13.You should be able to block a user and no longer have them on recommended list or chat with them.
-14.You should be able to chat with a user if and only if you both like each other.
+- You should be able to access Matcha from the web browser by navigation to `localhost:3000`.
+- You should receive an email with a verification link asking you to verify your account.
+- You should be able to login with the account you just created.
+- You Should be able to edit your extended profile.
+- When navigating to the search bar should be able to see a list of users 
+- You should be able to filter through matches.
+- You should be able to access the user geolocation.
+- A user popularity rating should increase when you like
+- You should be able to receive notifications when another user has viewed your profile.
+- You should be able to see who has liked or viewed your profile
+- You should be able to view a user’s profile.
+- You should be able to unlike a user( this means you can’t chat with them)
+- You should be able to block a user and no longer have them on recommended list or chat with them.
+- You should be able to chat with a user if and only if you both like each other.
