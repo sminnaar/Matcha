@@ -33,11 +33,8 @@ function sql(file) {
   console.log('STARTING...');
   console.log('Creating extensions...');
   try {
-    console.log('Extension  Try...');
     await db.none(sql('./sql/init/extensions.sql'));
-    console.log('Extension  Try After Await...');
   } catch (e) {
-    console.log('Extension  Catch...');
     console.log('Error installing extensions: ' + e.message || e);
   }
 

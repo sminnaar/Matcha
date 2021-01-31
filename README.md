@@ -18,13 +18,23 @@ This project was an introduction to the fundamentals of advanced web development
 
 ## Tools & Technologies
 #### Back-end:
-- Node Server:  A Node.js server makes your app available to serve HTTP requests. It provides the interaction between users and your application. 
+
+- Node Server:  A Node.js server makes your app available to serve HTTP requests. It provides the interaction between users and your application.
+
 - JavaScript: JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.
+
 #### Front-end:
+
 - HTML: The standard markup language used to develop web Pages. It only defines the layout of the page contents. 
+
 - CSS: Used to define the style of the website. It augments HTML and can be used to create semi-dynamic websites.
+
 - JavaScript: JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.
+
+- React: React is an open-source, front end, JavaScript library for building user interfaces or UI components.
+
 #### Data Management System (DBMS):
+
 - Postgres: PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
 
 ## Instalation and Setup
@@ -32,7 +42,6 @@ This project was an introduction to the fundamentals of advanced web development
 This is a general guide to istall the relevant dependancies and run the project in developement mode.
 
 For a production version you will need to build the app using npm build and add code for the server to serve the static files.
-
 
 ### Database Setup (Postgresql)
 
@@ -80,6 +89,17 @@ Grab the url from Github or [Here](https://github.com/sminnaar/matcha.git)
 Clone the repository into any availible directory:
 ```
 	git clone https://github.com/sminnaar/matcha.git
+```
+
+## Setting up SMTP Sever
+
+Follow this guide using a newly created gmail account:
+    [Setting up your google SMTP server](https://www.siteground.com/kb/google_free_smtp_server/)
+
+After cloning and setting up the SMTP server the sample.env file in the server directory can be renamed to .env and populated.
+```
+    cd matcha/
+    mv /server/sample.env /server/.env
 ```
 
 ## Running the App and Server
