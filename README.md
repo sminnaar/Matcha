@@ -110,154 +110,37 @@ matcha/
         └── validation.js
 ```
 
-# Requirements
-
-
-
-# Marking Sheet Stuff
-
-- All the forms must have correct validations and the whole website must be secure.
-    - No “plain text” password stored in your database.
-    - Protect agains script injections.
-    - Reject unnwanted or dangerous content.
-    - Secure SQL queries.
-
-Respect for limitations
-The subject allows the use of a micro-framework, and only that.
-If the tool used by the student (if there is one) is not in the subject's list of suggestions,
-check that it is a micro-framework according to the definition of the subject.
-Reminder:
-`We will consider that a" micro-framework "has a router, and possibly templating, but no ORM, validators or management of user
-accounts.`
-You will have to look at the package files if a library One of the following features must be installed:
-- ORM
-- Validators
-- User Account Management
-Also check that:
-- the database used is not of type NoSQL.
-- no Error tracking library (Sentry, Raven ...) configured is installed on the repo. You DO NOT have to make 500, so it's useless to
-catch these mistakes!
-
-With the evaluated, you will have to proceed to a clean installation of the necessary packages to launch its Matcha.
-You will also have to hydrate his database with the script he has provided you.
-Verify that the database has at least 500 different profiles.
-
-Launch the web server that is supposed to serve the site. This one must not produce any error.
-
-The site must be able to offer a new user registration form.
-You must be able to enter:
-- a username
-- a first and last name
-- a secure password (a simple word of French must not be accepted)
-- an email address
-The form must have validators client and server side for s ensure that the right data is well transmitted.
-At the end of registration, it must be completed by sending an email requesting confirmation of the account by single link.
-You can not sign in with this account until the link has been clicked.
-
-The user must be able to log in with his credentials, and must be able to receive an email to reset his password in case of
-forgetfulness.
-A logged in user must be able to complete an extended profile, and must be able to modify this information, as well as that provided
-at registration, at any time.
-It is permissible for a user to access the profile search, but it must not be able to do more until its extended profile is filled.
- Yes  No.
- Yes  No.
-Disconnection must be possible from any page of the site.
-If one of the points above has not been respected, the question is counted false and you move on to the next.
-
-The user must be able to complete the following fields:
-- His gender.
-- His sexual orientation.
-- A short bio.
-- A list of interests, in the form of tags (\ #Bio, \ #NoMakeup, \ # Fixie4Ever ...)
-- Images, maximum five, including one used as a profile photo. \\
-If the seed is correctly implemented, you can make a proposal of tags in a certain form (autocompletion, proposal of the top trends
-tags ...)
-Once his profile filled, he can access the whole site.
-This information can be changed at any time, once connected.
-If one of the points above has not been respected, the question is counted false and you move on to the next
-
-The user must be able to find, when he logs in, a list of suggested profiles.
-This selection will not be possible until the extended profile of the user is filled.
-Normally, if this extended profile is not yet filled, you should be asked to fill it out!
-Relevant profiles must be offered to the user, corresponding to his sexual orientation.
-If the user does not inform his sexuality, he will be considered as bisexual.
-Check with the student that the profile proposals are weighted according to three criteria:
-- same geographical area as the user
-- maximum of common interest tags
-- maximum popularity
-The display must not crash or exceed a load of more than 5 seconds. By loading, I mean
-the total time between the display click and the complete rendering with the profiles.
- Yes  No.
- Yes  No.
-You can ask the student to explain his strategy to display a list of relevant suggestions.
-
-The user must be able to perform an advanced search by selecting one or more criteria such as:
-- age
-range
-- popularity score range - location
-- one or more tags of interest
-The display must be consistent.
-If one of the points above has not been respected, the question is counted false and you move on to the next
-
-The list of profile proposals, as well as the search results, must be sortable and filterable by:
-- age
-- location
-- popularity
-- tags
-If one of the points above has not been respected, the question is counted false and you move on to the next.
-
-The user must be geolocated to the district.
-If the user does not want to be geolocated, strategies must be put in place to do it in spite of himself.
-The user must be able to modify his location on his profile.
-
-Each user must have a popularity score.
-Ask the student to explain his strategy for calculating this score, it must be consistent and a relevant minima.
-
-You must be notified, in real time (we tolerate a margin of 10 seconds), of the following events:
-- a "like" of his profile
-- someone has visited his profile
-- a user "liked" has "liked" in return
-- a connected user does not "like" anymore the current user
-A you to make the necessary simulations (new account, to use an account of the seed of the evaluated ...)
-He must be able to see from any page that a notification has not been read.
-
-The user must be able to consult people who have viewed his profile.
-So there must be a history of profile visits, as well as people who have "liked" it.
-If one of the points above has not been respected, the question is counted false and you move on to the next.
-
-The public profile of a user must include all the information he has provided, except his email address and password.
-It must also include its popularity score and its connection status.
-If the user appears disconnected, we must see the date of his last visit.
-
-A user may like, and unliker, the profile of another user.
-When two users have "liked each other", they are said to have matched: they can then start the conversation.
-A user who does not have a photo should not be able to like another user's profile.
-The profile of another user should clearly show whether he is logged in to the current user or if he "like" the current user.
-
-You can defer a profile as "false account", and block a given user.
-A blocked user should no longer appear in the search results (or suggestions), and should no longer generate notifications.
-An administrator can view blocking requests directly on the app, and act accordingly.
-
-Two connected users can chat in real time (we allow a margin of 10 seconds).
-The user must be able to see from any page that he has received a message.
-
-The site must be compatible on Firefox (> = 41) and Chrome (> = 46).
-The above functionalities work, without any warning, error or
-log bizarre
-If the above point was not respected, the question is counted
-false and you proceed to the next one.
-
-Mobile
-The site is presentable on mobile as well as on small resolutions?
-Is the layout of the site respected?
-If the above point has not been respected, the question is counted as
-false and you move on to the next one.
-
-Make sure that:
-- The passwords are encrypted in the database. In no case should they be in the clear.
-- Of the script inserted in forms must not execute
-- There is no SQL injection possible (try a connection with as password 'blabla' OR 1 = '1`)
-
-
-## Testing(Needsto change)
+## Testing
 [Marking sheet linked here](https://github.com/tcajee/camagru/blob/master/camagru.pdf)
+
+### Summarised testing points
+1.Launch web server
+2.Create an account
+3.Login
+4.Edit extended profile
+5.View profile proposals
+6.Research /filter
+7.geolocation
+8.Popularity rating
+9.Notifications
+10.Consultations?(see who view/liked profile)
+11.View profile
+12.unlike user
+13.block
+14.chat
+
+### Expected testing outcomes
+1.You should be able to access my Matcha from the web browser by navigation to localhost:3000.
+2.You should receive an email with a verification link asking you to verify your account.
+3.You should be able to login with the account you just created.
+4.Should be able to edit your extended profile.
+5. When navigating to the search bar should be able to see a list of users which …
+6.You should be able to filter through matches.
+7.You should be able to add your geolocation.
+8.A person’s popularity rating should increase when you …
+9.You should be able to receive notifications when another user has viewed your profile.
+10. You should be able to see who has liked or viewed your profile
+11.You should be able to view a user’s profile.
+12.You should be able to unlike a user( this means you can’t chat with them)
+13.You should be able to block a user and no longer have them on recommended list or chat with them.
+14.You should be able to chat with a user if and only if you both like each other.
